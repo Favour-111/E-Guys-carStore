@@ -1,0 +1,68 @@
+:root {
+  color: #493d9e;
+}
+@font-face {
+  font-family: poppinsSemiBold;
+  src: url(../../assets/font/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: poppinsLight;
+  src: url(../../assets/font/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url(../../assets/font/Poppins-Medium.ttf);
+}
+.blog-container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden;
+  width: 100%;
+  white-space: normal; /* Allows text wrapping */
+  scroll-behavior: smooth;
+  flex-wrap: nowrap; /* Prevents wrapping of items */
+}
+
+.blog-item {
+  max-width: 390px !important;
+  min-width: 300px; /* Ensures consistent width */
+  flex: 0 0 auto; /* Prevents shrinking */
+  word-wrap: break-word; /* Breaks long words */
+  overflow: hidden; /* Hides overflowing content */
+}
+
+.blog-content {
+  margin-top: 10px;
+  color: white;
+  font-family: poppinsMedium;
+  font-size: 13px;
+  width: 100%; /* Ensures it doesn't exceed container width */
+  line-height: 1.5; /* Increases readability */
+}
+
+.blog-img img {
+  width: 100%;
+}
+.blog-time {
+  color: rgb(255, 255, 255);
+  font-family: poppinsBold;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.blog-header {
+  color: rgb(255, 255, 255);
+  font-family: poppinsBold;
+  font-size: 15px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+.readmore {
+  color: #f3f3f3;
+  text-transform: capitalize;
+  font-family: poppinsMedium;
+  font-size: 11px;
+}

@@ -1,0 +1,216 @@
+:root {
+  color: #493d9e;
+}
+@font-face {
+  font-family: poppinsSemiBold;
+  src: url(../../assets/font/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: poppinsLight;
+  src: url(../../assets/font/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url(../../assets/font/Poppins-Medium.ttf);
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  .cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .content-bd {
+      width: 500px !important;
+
+      h1 {
+        color: white;
+        width: 550px;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: poppinsSemiBold;
+      }
+    }
+  }
+
+  p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-family: poppinsLight;
+    margin-top: 20px;
+    text-transform: capitalize;
+  }
+  button {
+    background-color: #493d9e;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 7px 7px 0px 0px rgb(255, 255, 255);
+    width: 140px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-family: poppinsSemiBold;
+    text-transform: uppercase;
+    justify-content: center;
+    transition: 300ms;
+  }
+  button:hover {
+    box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
+  }
+}
+.car-img {
+  img {
+    width: 800px;
+  }
+}
+.fixed-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+/* General styles */
+.content-bd h1 {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: poppinsSemiBold;
+}
+
+/* Each line styled separately */
+.line1,
+.line2,
+.line3 {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 3px solid transparent; /* Initially hidden */
+}
+
+/* Typing animations with cursor only during typing */
+.line1 {
+  animation: typing 2s steps(20, end) forwards, blink 0.8s steps(2, end) 2s;
+}
+
+.line2 {
+  animation: typing 2s steps(20, end) forwards 2s, blink 0.8s steps(2, end) 4s;
+}
+
+.line3 {
+  animation: typing 2s steps(10, end) forwards 4s, blink 0.8s steps(2, end) 6s;
+}
+
+.line1.typed::after,
+.line2.typed::after,
+.line3.typed::after {
+  animation: none; /* Stops blinking */
+  background: transparent; /* Hides cursor */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Adds a slight slide-up effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply fade-in effect with delay */
+.car-img img {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1.5s ease-in-out forwards;
+  animation-delay: 4s; /* Delay before animation starts */
+}
+@media screen and (max-width: 868px) {
+  .car-img {
+    img {
+      width: 700px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .car-img {
+    img {
+      width: 600px;
+    }
+  }
+}
+@media screen and (max-width: 668px) {
+  .content {
+    padding: 50px 20px;
+  }
+  .car-img {
+    img {
+      width: 500px;
+    }
+  }
+}
+@media screen and (max-width: 568px) {
+  .content {
+    padding: 50px 20px;
+  }
+  .car-img {
+    img {
+      width: 400px;
+    }
+  }
+  h1 {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 440px) {
+  .content {
+    padding: 50px 20px;
+  }
+  .car-img {
+    img {
+      width: 350px;
+    }
+  }
+  h1 {
+    width: 100% !important;
+    font-size: 25px;
+  }
+  p {
+    font-size: 15px !important;
+  }
+  button {
+    width: 120px !important;
+    height: 40px !important;
+    font-size: 15px;
+  }
+}

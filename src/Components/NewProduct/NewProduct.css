@@ -1,0 +1,27 @@
+.NewProduct {
+  padding: 30px 50px;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 30px;
+  margin: 0;
+}
+.item-body {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 660px) {
+  .NewProduct {
+    padding: 30px;
+  }
+  .item {
+    padding: 10px;
+  }
+  .item-body {
+    gap: 10px;
+  }
+}

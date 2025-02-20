@@ -1,0 +1,102 @@
+:root {
+  color: #493d9e;
+}
+@font-face {
+  font-family: poppinsSemiBold;
+  src: url(../../assets/font/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: poppinsLight;
+  src: url(../../assets/font/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url(../../assets/font/Poppins-Medium.ttf);
+}
+.category-body {
+  padding: 70px 100px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: poppinsSemibold;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: white;
+}
+.dash {
+  background-color: #493d9e;
+  width: 20px;
+  height: 2px;
+}
+.category-item-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+.category-itm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.blob {
+  background-color: #493d9e;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  opacity: 0.3;
+  border-radius: 100%;
+}
+.category-img {
+  border-radius: 10px;
+  background-color: #f3f3f3;
+  box-shadow: 9px 4px 15px 7px rgba(0, 0, 0, 0.14);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+}
+.category-img img {
+  width: 100px;
+}
+.category-name {
+  font-family: poppinsMedium;
+  text-transform: capitalize;
+  color: white;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+  .category-item-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/* Media Query for smaller screens */
+@media screen and (max-width: 668px) {
+  .category-body {
+    padding: 30px 30px !important;
+  }
+  .category-item-body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .category-img {
+    height: 110px;
+    border-radius: 10px !important;
+    width: 120px;
+  }
+  .category-img img {
+    width: 80px;
+  }
+  .category-name {
+    font-size: 13px;
+  }
+}
