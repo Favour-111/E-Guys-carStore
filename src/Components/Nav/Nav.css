@@ -127,18 +127,19 @@
   padding: 10px 20px;
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 20px;
   flex-direction: column;
   width: 100%;
+  margin-top: 15px;
   li {
     width: 100%;
-    border-bottom: 1px solid white;
+    list-style-type: none;
   }
   .Link {
     color: white;
-    font-family: poppinsMedium;
+    font-family: poppinsSemiBold;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 .Sub-nav {
