@@ -63,6 +63,9 @@
 .nav-sm-cont {
   display: none;
 }
+.nav-sm-container {
+  display: none;
+}
 
 @media screen and (max-width: 800px) {
   .nav-container {
@@ -98,6 +101,7 @@
     overflow: hidden;
   }
   .nav-sm-container {
+    display: block;
     width: 0;
     background-color: #1e1e1e;
     position: fixed;
