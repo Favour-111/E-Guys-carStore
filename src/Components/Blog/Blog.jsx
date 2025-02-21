@@ -10,7 +10,7 @@ const Blog = () => {
       <div className="blog-container">
         {blog.slice(0, 3).map((item) => {
           return (
-            <div className="blog-item">
+            <div className="blog-item rounded">
               <div className="blog-img">
                 <img src={item.image} alt="" />
               </div>

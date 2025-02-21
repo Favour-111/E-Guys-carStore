@@ -78,12 +78,13 @@
 @media screen and (max-width: 768px) {
   .category-item-body {
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 }
 /* Media Query for smaller screens */
 @media screen and (max-width: 668px) {
   .category-body {
-    padding: 30px 30px !important;
+    padding: 30px 20px !important;
   }
   .category-item-body {
     grid-template-columns: repeat(3, 1fr);
@@ -98,5 +99,8 @@
   }
   .category-name {
     font-size: 13px;
+  }
+  .header {
+    font-size: 20px;
   }
 }

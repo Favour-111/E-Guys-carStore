@@ -5,7 +5,7 @@ import product from "../product";
 const NewProduct = () => {
   return (
     <div className="NewProduct">
-      <div className="header mt-5">
+      <div className="header">
         <div className="dash"></div>
         <div>special offer</div>
       </div>

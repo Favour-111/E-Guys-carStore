@@ -30,7 +30,7 @@ const Category = () => {
   return (
     <div>
       <div className="category-body">
-        <div className="header">
+        <div className="header mt-3">
           <div className="dash"></div>
           <div>Top category</div>
         </div>

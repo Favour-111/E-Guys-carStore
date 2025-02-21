@@ -22,6 +22,7 @@
   width: 100%;
   white-space: normal; /* Allows text wrapping */
   scroll-behavior: smooth;
+  scrollbar-width: none;
   flex-wrap: nowrap; /* Prevents wrapping of items */
 }
 
