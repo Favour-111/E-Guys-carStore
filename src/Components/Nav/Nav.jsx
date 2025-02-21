@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Nav.css";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowRoundForward } from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { GoHeart } from "react-icons/go";
 import { CiShoppingCart } from "react-icons/ci";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
+import cancel from "../../assets/images/icons8-cancel-50.png";
+import { Link } from "react-router-dom";
+
 const Nav = () => {
+  const handleMouseEnter = () => setNavIsOpen(true);
+  const handleMouseLeave = () => setNavIsOpen(false);
+
+  const [navIsOpen, setNavIsOpen] = useState(false);
   return (
     <div>
       <div className="nav-container">
@@ -53,7 +60,11 @@ const Nav = () => {
         </div>
       </div>
       <div className="nav-sm-cont">
-        <div className="hamburger">
+        <div
+          className="hamburger"
+          onClick={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <RxHamburgerMenu />
         </div>
         <div className="logo-cont">
@@ -83,6 +94,46 @@ const Nav = () => {
             <RiShoppingCartLine size={20} />
             <div className="bar-counter">6</div>
           </div>
+        </div>
+      </div>
+      {navIsOpen && <div className="background-overflow"></div>}
+      <div
+        className={`nav-sm-container ${navIsOpen ? "open" : ""}`}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="menu-head">
+          <div className="text">Menu</div>
+          <div onClick={() => setNavIsOpen(false)} aria-label="Close Menu">
+            <img src={cancel} width={40} alt="" />
+          </div>
+        </div>
+        <div>
+          <ul className="Nav-link">
+            <li>
+              <Link className="Link">Home</Link>
+            </li>
+            <li>
+              <div className="Sub-nav">
+                <div className="Link">AutoParts</div>
+                <div>
+                  <IoIosArrowRoundForward size={20} />
+                </div>
+              </div>
+            </li>
+            <li>
+              <Link className="Link">Collection</Link>
+            </li>
+            <li>
+              <Link className="Link">About Us</Link>
+            </li>
+            <li>
+              <Link className="Link">Contact</Link>
+            </li>
+            <li>
+              <Link className="Link">Blog</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
