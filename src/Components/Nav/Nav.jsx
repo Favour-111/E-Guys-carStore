@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "./Nav.css";
-import { IoIosArrowDown, IoIosArrowRoundForward } from "react-icons/io";
+import {
+  IoIosArrowDown,
+  IoIosArrowForward,
+  IoIosArrowRoundForward,
+} from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { GoHeart } from "react-icons/go";
 import { CiShoppingCart } from "react-icons/ci";
@@ -8,12 +12,14 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 import cancel from "../../assets/images/icons8-cancel-50.png";
 import { Link } from "react-router-dom";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Nav = () => {
   const handleMouseEnter = () => setNavIsOpen(true);
   const handleMouseLeave = () => setNavIsOpen(false);
 
   const [navIsOpen, setNavIsOpen] = useState(false);
+  const [subNav, setSubNav] = useState(false);
   return (
     <div>
       <div className="nav-container">
@@ -113,13 +119,45 @@ const Nav = () => {
             <li>
               <Link className="Link">Home</Link>
             </li>
-            <li>
-              <div className="Sub-nav">
-                <div className="Link">AutoParts</div>
-                <div>
-                  <IoIosArrowRoundForward size={20} />
-                </div>
+            <li onClick={() => setSubNav(!subNav)}>
+              <div className="d-flex align-items-center justify-content-between">
+                <Link className="Link">AutoParts</Link>
+                <IoIosArrowRoundForward
+                  className={`Arrows ${subNav ? "open" : ""}`}
+                />
               </div>
+              <ul className="sub-body">
+                <div
+                  className={`ms-2  d-flex sub-body-item ${
+                    subNav ? "open" : ""
+                  }`}
+                >
+                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                    <div>Audi</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                    <div>BMW</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                    <div>Mercedes benz</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                    <div>Toyota</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                </div>
+              </ul>
             </li>
             <li>
               <Link className="Link">Collection</Link>
