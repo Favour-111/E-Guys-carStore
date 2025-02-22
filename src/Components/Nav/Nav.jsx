@@ -33,14 +33,13 @@ const Nav = () => {
         <div className="navigation-list-items">
           <ul>
             <li>Home</li>
+            <li>collections</li>
             <li>
-              collections <IoIosArrowDown />
+              AutoParts <IoIosArrowDown />
             </li>
-            <li>
-              Pages <IoIosArrowDown />
-            </li>
-            <li>Blogs</li>
+            <li>About Us</li>
             <li>Contact</li>
+            <li>Blog</li>
           </ul>
         </div>
         <div className="nav-right-content">
