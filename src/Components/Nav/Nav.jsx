@@ -20,6 +20,7 @@ const Nav = () => {
 
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [subNav, setSubNav] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   return (
     <div>
       <div className="nav-container">
@@ -34,8 +35,40 @@ const Nav = () => {
           <ul>
             <li>Home</li>
             <li>collections</li>
-            <li>
+            <li
+              className="position-relative"
+              onMouseOver={() => setDropDown(true)}
+              onMouseOut={() => setDropDown(false)}
+            >
               AutoParts <IoIosArrowDown />
+              <ul className={`sub-body-bg ${dropDown ? "open" : ""}`}>
+                <div className="sub-bg">
+                  <li className="dropdown-item-lg ">
+                    <div>Audi</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                  <li className="dropdown-item-lg ">
+                    <div>BMW</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                  <li className="dropdown-item-lg ">
+                    <div>Mercedes </div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                  <li className="dropdown-item-lg ">
+                    <div>Toyota</div>
+                    <div>
+                      <IoIosArrowForward className="text-light" />
+                    </div>
+                  </li>
+                </div>
+              </ul>
             </li>
             <li>About Us</li>
             <li>Contact</li>
@@ -131,25 +164,25 @@ const Nav = () => {
                     subNav ? "open" : ""
                   }`}
                 >
-                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                  <li className="dropdown-item-lg ">
                     <div>Audi</div>
                     <div>
                       <IoIosArrowForward className="text-light" />
                     </div>
                   </li>
-                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                  <li className="dropdown-item-lg ">
                     <div>BMW</div>
                     <div>
                       <IoIosArrowForward className="text-light" />
                     </div>
                   </li>
-                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                  <li className="dropdown-item-lg ">
                     <div>Mercedes benz</div>
                     <div>
                       <IoIosArrowForward className="text-light" />
                     </div>
                   </li>
-                  <li className="Link mt-3 d-flex align-items-center justify-content-between w-100 ">
+                  <li className="dropdown-item-lg ">
                     <div>Toyota</div>
                     <div>
                       <IoIosArrowForward className="text-light" />
