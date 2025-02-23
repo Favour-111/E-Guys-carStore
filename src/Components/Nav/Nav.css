@@ -157,6 +157,15 @@
     align-items: center;
     border-bottom: 1px solid white;
   }
+  .dropdown-item-lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    font-family: poppinsMedium;
+    font-size: 14px;
+    margin-top: 15px !important;
+  }
 }
 
 .Nav-link {
