@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Loader.css";
 import loader from "../../assets/images/icons8-tire-94.png";
+import { useNavigate } from "react-router-dom";
 const Loader = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/Home");
+    }, 4000);
+  });
   return (
     <div>
       <div className="loader-bg">
